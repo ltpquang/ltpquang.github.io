@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="vi">
+    <title>Tui của Quang</title>
+    <subtitle>Cóp nhặt — software engineering, leadership, và chuyện linh tinh.</subtitle>
+    <link href="https://ltpquang.github.io/feed.xml" rel="self"/>
+    <link href="https://ltpquang.github.io/"/>
+    <updated>2026-03-10T15:12:41.709Z</updated>
+    <id>https://ltpquang.github.io/</id>
+    <author>
+        <name>Quang</name>
+    </author>
+    
+    <entry>
+        <title>My second post</title>
+        <link href="https://ltpquang.github.io/blog/my-second-post/"/>
+        <updated>2024-01-15T00:00:00.000Z</updated>
+        <id>https://ltpquang.github.io/blog/my-second-post/</id>
+        <content type="html">&lt;p&gt;Content goes here&lt;/p&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>My first post</title>
+        <link href="https://ltpquang.github.io/blog/my-first-post/"/>
+        <updated>2024-01-01T00:00:00.000Z</updated>
+        <id>https://ltpquang.github.io/blog/my-first-post/</id>
+        <content type="html">&lt;p&gt;Content goes here&lt;/p&gt;
+</content>
+    </entry>
+    
+</feed>
