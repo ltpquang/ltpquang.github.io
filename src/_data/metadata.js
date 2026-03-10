@@ -1,5 +1,5 @@
 module.exports = {
-    title: "Tui của Quang",
+    title: "Túi của Quang",
     description: "Cóp nhặt — software engineering, leadership, và chuyện linh tinh.",
     author: {
         name: "Quang",

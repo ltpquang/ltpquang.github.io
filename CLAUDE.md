@@ -12,7 +12,7 @@ npm run clean    # remove public/ output
 
 ## Architecture
 
-Personal blog built with **Eleventy (11ty) v3**. Source in `src/`, output to `public/` (git-ignored). Deployed to GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`) on push to `main`, published to `gh-pages` branch.
+Personal blog "Túi của Quang" built with **Eleventy (11ty) v3**. Source in `src/`, output to `public/` (git-ignored). Deployed to GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`) on push to `main`, published to `gh-pages` branch.
 
 ### Layout hierarchy
 
