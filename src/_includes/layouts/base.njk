@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} — {{ metadata.title }}{% else %}{{ metadata.title }}{% endif %}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <meta name="author" content="{{ metadata.author.name }}">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ metadata.title }}{% endif %}">
+    <meta property="og:description" content="{{ description or metadata.description }}">
+    <meta property="og:type" content="{% if layout == 'layouts/post.njk' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="{{ metadata.title }}" href="/feed.xml">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/prism-github.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="site-title">{{ metadata.title }}</a>
+            <nav class="site-nav">
+                <a href="/">Trang chủ</a>
+                <a href="/blog/">Bài viết</a>
+                <a href="/tags/">Tags</a>
+                <a href="/feed.xml" title="RSS Feed">RSS</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>© {{ metadata.author.name }} · <a href="/feed.xml">RSS</a></span>
+        </div>
+    </footer>
+</body>
+</html>

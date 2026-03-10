@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+title: Bài viết
+permalink: /blog/
+---
+<div class="page-header">
+    <h1>Bài viết</h1>
+</div>
+
+{% if collections.posts.length %}
+<ul class="post-list">
+    {% for post in collections.posts %}
+    <li class="post-list-item">
+        <a href="{{ post.url }}" class="post-list-title">{{ post.data.title }}</a>
+        <time class="post-list-date" datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+        {% if post.data.tags %}
+        <span class="post-tags">
+            {% for tag in post.data.tags %}
+                {% if tag != "posts" %}
+                <a href="/tags/{{ tag | slugify }}/" class="tag">{{ tag }}</a>
+                {% endif %}
+            {% endfor %}
+        </span>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Chưa có bài viết nào.</p>
+{% endif %}

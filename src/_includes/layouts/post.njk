@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+---
+<article class="post">
+    <header class="post-header">
+        <h1 class="post-title">{{ title }}</h1>
+        <div class="post-meta">
+            <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>
+            {% if tags %}
+            <span class="post-tags">
+                {% for tag in tags %}
+                    {% if tag != "posts" %}
+                    <a href="/tags/{{ tag | slugify }}/" class="tag">{{ tag }}</a>
+                    {% endif %}
+                {% endfor %}
+            </span>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="post-content">
+        {{ content | safe }}
+    </div>
+
+    <footer class="post-footer">
+        <a href="/blog/" class="back-link">← Tất cả bài viết</a>
+    </footer>
+</article>
+
+{% if metadata.giscus.enabled and metadata.giscus.repoId != "PASTE_REPO_ID_HERE" %}
+<section class="comments">
+    <script src="https://giscus.app/client.js"
+        data-repo="{{ metadata.giscus.repo }}"
+        data-repo-id="{{ metadata.giscus.repoId }}"
+        data-category="{{ metadata.giscus.category }}"
+        data-category-id="{{ metadata.giscus.categoryId }}"
+        data-mapping="{{ metadata.giscus.mapping }}"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="{{ metadata.giscus.theme }}"
+        data-lang="vi"
+        crossorigin="anonymous"
+        async>
+    </script>
+</section>
+{% endif %}

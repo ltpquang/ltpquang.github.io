@@ -1,0 +1,26 @@
+---
+layout: layouts/home.njk
+title: Tui của Quang
+---
+<section class="home-intro">
+    <h1 class="home-title">Tui của Quang</h1>
+    <p class="home-desc">Cóp nhặt — software engineering, leadership, và chuyện linh tinh.</p>
+</section>
+
+<section class="home-posts">
+    <h2>Bài viết gần đây</h2>
+    {% set recentPosts = collections.posts | limit(5) %}
+    {% if recentPosts.length %}
+    <ul class="post-list">
+        {% for post in recentPosts %}
+        <li class="post-list-item">
+            <a href="{{ post.url }}" class="post-list-title">{{ post.data.title }}</a>
+            <time class="post-list-date" datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/blog/" class="view-all">Xem tất cả →</a>
+    {% else %}
+    <p>Chưa có bài viết nào.</p>
+    {% endif %}
+</section>

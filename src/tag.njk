@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+pagination:
+    data: collections.tagList
+    size: 1
+    alias: tag
+permalink: /tags/{{ tag | slugify }}/
+---
+<div class="page-header">
+    <h1>Tag: {{ tag }}</h1>
+    <a href="/tags/" class="back-link">← Tất cả tags</a>
+</div>
+
+<ul class="post-list">
+    {% set taggedPosts = collections[tag] %}
+    {% for post in taggedPosts | reverse %}
+    <li class="post-list-item">
+        <a href="{{ post.url }}" class="post-list-title">{{ post.data.title }}</a>
+        <time class="post-list-date" datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+    </li>
+    {% endfor %}
+</ul>
