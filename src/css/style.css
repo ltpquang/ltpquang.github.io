@@ -316,6 +316,35 @@ th { background: var(--color-bg-subtle); font-weight: 600; }
 .page-header h1 { margin: 0; }
 
 /* ============================================================
+   About
+   ============================================================ */
+.about-page h1 { margin-bottom: 1.25rem; }
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.social-links li a {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 0.3em 0.85em;
+    text-decoration: none;
+    transition: color 0.15s, border-color 0.15s;
+}
+.social-links li a:hover {
+    color: var(--color-link);
+    border-color: var(--color-link);
+    text-decoration: none;
+}
+
+/* ============================================================
    Comments
    ============================================================ */
 .comments {

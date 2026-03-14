@@ -1,6 +1,6 @@
 module.exports = {
     title: "Túi của Quang",
-    description: "Cóp nhặt — software engineering, leadership, và chuyện linh tinh.",
+    description: "Cần mẫn cóp nhặt hằng ngày",
     author: {
         name: "Quang",
         email: "",
@@ -8,6 +8,12 @@ module.exports = {
     url: "https://ltpquang.github.io",
     language: "vi",
     repo: "ltpquang/ltpquang.github.io",
+
+    social: {
+        github: "https://github.com/ltpquang",
+        twitter: "https://twitter.com/ltpquang",
+        linkedin: "https://linkedin.com/in/ltpquang",
+    },
 
     // Giscus comments — https://giscus.app
     // Steps to enable:
